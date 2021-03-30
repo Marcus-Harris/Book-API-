@@ -10,8 +10,8 @@ body {
     color: #fff;
     border-top: 30px rgb(141, 36, 36);
     max-height: 100%;
+    z-index: 0;
 }
-
 
 .topbar {
     background-color:rgb(141, 36, 36) ;
@@ -50,6 +50,8 @@ h1.page-title {
 
 .home-spacer {
     padding: 100px 20px 50px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .home-spacer form {
@@ -63,6 +65,8 @@ input {
     padding: 15px 25px;
     color: #000;
     border: 3pt solid #aaa;
+    position: relative;
+    z-index: 1;
 }
 
 input::placeholder {
@@ -147,6 +151,7 @@ a {
     filter: url(#goo);
 
 }
+
 .particle {
     width: 100px;
     height: 100px;
@@ -155,6 +160,7 @@ a {
     position: absolute;
     border-radius: 50%;
     animation: fall 15s infinite;
+    z-index: 0.5;
 }
 @keyframes fall {
     0% {top: 10%;}
@@ -164,13 +170,16 @@ a {
 }
 
 .particle:nth-of-type(2n) {
+    left: 40%;
     width: 60px;
     height: 60px;
+    animation-delay: 2s;
 }
 
 .particle:nth-of-type(3n) {
     width: 120px;
     height: 120px;
+    animation-delay: 6s;
 }
 
 .particle:nth-of-type(4) {
